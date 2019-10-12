@@ -1,0 +1,51 @@
+{
+  "name": "@ion-phaser-ce/core",
+  "version": "1.0.0",
+  "description": "A web component to integrate Phaser Framework CE (Community Edition) with Angular, React, Vue, etc",
+  "keywords": [
+    "ionic",
+    "phaser-ce",
+    "framework",
+    "angular",
+    "react",
+    "vue",
+    "app",
+    "vanillajs",
+    "webcomponent",
+    "web component",
+    "web components"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/ion-phaser-ce/ion-phaser-ce.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "peerDependencies": {
+    "phaser-ce": "^2.13.3"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.7.1",
+    "phaser-ce": "^2.13.3",
+    "rollup-plugin-node-polyfills": "^0.2.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proyecto26/ion-phaser-ce.git"
+  },
+  "private": false
+}
