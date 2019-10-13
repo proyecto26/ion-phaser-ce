@@ -22,7 +22,10 @@ Web Component built with **[Stencil.js](https://github.com/ionic-team/stencil)**
 
 ## Demo
 
-Do you want to see this web component in action? Visit https://codepen.io/jdnichollsc/full/oRrwKM yay! 🎉
+Do you want to see this web component in action? Visit https://codepen.io/jdnichollsc/full/NWWxezM yay! 🎉
+
+## IonPhaser CE
+Looking for [Phaser Framework 3](https://github.com/photonstorm/phaser)? Check [here](https://github.com/proyecto26/ion-phaser)!
 
 ## Getting Started
 
