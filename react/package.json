@@ -1,0 +1,68 @@
+{
+  "name": "@ion-phaser-ce/react",
+  "version": "1.0.0",
+  "description": "React specific wrapper for @ion-phaser-ce/core",
+  "keywords": [
+    "ionic",
+    "phaser-ce",
+    "framework",
+    "react",
+    "webcomponent",
+    "mobile",
+    "app",
+    "webapp",
+    "web component",
+    "web components",
+    "progressive web app",
+    "pwa"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proyecto26/ion-phaser.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf dist && rm -rf dist-transpiled",
+    "compile": "npm run tsc && rollup -c",
+    "tsc": "tsc -p .",
+    "test": "jest"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@ion-phaser-ce/core": "file:.."
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "10.12.9",
+    "@types/react": "^16.9.2",
+    "phaser-ce": "2.13.3",
+    "react": "^16.9.0",
+    "rollup": "^1.20.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-virtual": "^1.0.1",
+    "typescript": "^3.6.2"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "phaser-ce": "^2.13.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "dist",
+      "dist-transpiled"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ]
+  }
+}

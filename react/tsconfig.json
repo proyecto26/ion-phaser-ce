@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "lib": ["dom", "es2015", "scripthost"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist-transpiled",
+    "declarationDir": "dist/types",
+    "removeComments": false,
+    "sourceMap": true,
+    "jsx": "react",
+    "target": "es2017",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/phaser-ce/typescript"
+    ],
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "**/__tests__/**"
+  ],
+  "files": [
+    "./node_modules/phaser-ce/typescript/pixi.d.ts",
+    "./node_modules/phaser-ce/typescript/p2.d.ts",
+    "./node_modules/phaser-ce/typescript/phaser.d.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
+}

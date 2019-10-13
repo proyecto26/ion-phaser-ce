@@ -7,7 +7,6 @@ export const config: Config = {
     nodePolyfills(),
   ],
   commonjs: {
-    include: 'node_modules/phaser-ce/**',
     namedExports: {
       'phaser-ce': ['Game', 'IGameConfig']
     }
@@ -25,5 +24,6 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null // disable service workers
     }
-  ]
+  ],
+  preamble: 'IonPhaser for Phaser Framework CE - MIT License'
 };
