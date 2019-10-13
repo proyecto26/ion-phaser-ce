@@ -11,7 +11,6 @@ export const config: Config = {
       'phaser-ce': ['Game', 'IGameConfig']
     }
   },
-  globalScript: 'src/global/index.ts',
   outputTargets: [
     {
       type: 'dist',
@@ -25,5 +24,5 @@ export const config: Config = {
       serviceWorker: null // disable service workers
     }
   ],
-  preamble: 'IonPhaser for Phaser Framework CE - MIT License'
+  preamble: 'IonPhaser for Phaser Framework CE (Community Edition) - MIT License'
 };

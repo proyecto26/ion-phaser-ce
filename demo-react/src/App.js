@@ -18,7 +18,7 @@ class App extends Component {
       width: "100%",
       height: "100%",
       renderer: Phaser.AUTO,
-      scene: {
+      state: {
         init: function() {
           this.stage.backgroundColor = '#24252A';
         },
@@ -61,7 +61,7 @@ class App extends Component {
               </div>
             </React.Fragment>
           }
-          { !unmounted && <IonPhaser game={game} initialize={initialize} /> }
+          { !unmounted && <IonPhaser class="game" game={game} initialize={initialize} /> }
           { initialize && !unmounted &&
             <div onClick={this.destroy} className="flex destroyButton">
               <a href="#1" className="bttn">Destroy</a>

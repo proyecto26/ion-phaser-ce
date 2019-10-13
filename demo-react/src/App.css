@@ -29,6 +29,7 @@
 }
 
 .flex {
+  z-index: 2;
   min-height: 12vh;
   display: flex;
   align-items: center;
@@ -114,4 +115,11 @@ a.bttn-dark:focus {
   to {
     transform: rotate(360deg);
   }
+}
+
+.game {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
