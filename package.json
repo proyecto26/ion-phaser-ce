@@ -1,6 +1,7 @@
 {
   "name": "@ion-phaser-ce/core",
   "version": "1.0.0",
+  "private": false,
   "description": "A web component to integrate Phaser Framework CE (Community Edition) with Angular, React, Vue, etc",
   "keywords": [
     "ionic",
@@ -46,6 +47,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/proyecto26/ion-phaser-ce.git"
-  },
-  "private": false
+  }
 }
