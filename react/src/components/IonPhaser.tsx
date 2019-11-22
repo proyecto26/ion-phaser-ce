@@ -1,7 +1,7 @@
 import React from 'react';
 import { Game } from 'phaser-ce';
 
-declare module "react" {
+declare global {
   namespace JSX {
     interface IntrinsicElements {
       'ion-phaser-ce': any
