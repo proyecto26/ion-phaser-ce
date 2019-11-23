@@ -109,7 +109,7 @@
       opacity: 1;
     }
 
-    .ion-phaser {
+    ion-phaser-ce {
       width: 100%;
       height: 100%;
     }
@@ -117,18 +117,17 @@
 
 </head>
 <body>
-  <ion-phaser-ce class="ion-phaser"></ion-phaser-ce>
+  <ion-phaser-ce initialize="false" style="display: none;"></ion-phaser-ce>
   <div id="init" class="flex">
     <a href="#0" class="bttn">Initialize</a>
   </div>
   <script>
     const ionPhaser = document.querySelector('ion-phaser-ce');
-    const initButton = document.getElementById('init')
-    ionPhaser.initialize = false
+    const initButton = document.getElementById('init');
 
-    ionPhaser.game = {
-      width: "100%",
-      height: "100%",
+    const game = {
+      width: '100%',
+      height: '100%',
       renderer: Phaser.AUTO,
       state: {
         init: function() {
@@ -144,9 +143,9 @@
           this.helloWorld = this.game.add.text(
             this.game.world.centerX,
             this.game.world.centerY, 
-            "Hello World", { 
-              font: "40px Arial", 
-              fill: "#ffffff" 
+            'Hello World', { 
+              font: '40px Arial', 
+              fill: '#ffffff' 
             }
           );
           this.helloWorld.anchor.set(0.5);
@@ -157,9 +156,15 @@
       }
     }
 
-    initButton.addEventListener("click", function(){
-      ionPhaser.initialize = true
-      initButton.style.display = "none"
+    initButton.addEventListener('click', function(){
+      initButton.style.display = 'none';
+
+      ionPhaser.style.removeProperty('display');
+      ionPhaser.game = game;
+      ionPhaser.initialize = true;
+      ionPhaser.getInstance()
+        .then((i) => console.log(i))
+        .catch((error) => console.error(error))
     });
   </script>
 </body>

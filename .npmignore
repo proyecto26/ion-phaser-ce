@@ -1,2 +1,7 @@
-react
+.github
+.stencil
+.editorconfig
+
+react/
 demo-*
+img/

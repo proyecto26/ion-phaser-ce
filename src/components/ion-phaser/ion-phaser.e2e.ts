@@ -5,7 +5,7 @@ describe('ion-phaser-ce', () => {
     const page = await newE2EPage();
 
     await page.setContent('<ion-phaser-ce></ion-phaser-ce>');
-    const element = await page.find('ion-phaser');
+    const element = await page.find('ion-phaser-ce');
     expect(element).toHaveClass('hydrated');
   });
 });
