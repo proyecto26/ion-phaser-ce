@@ -25,6 +25,7 @@ Web Component built with **[Stencil.js](https://github.com/ionic-team/stencil)**
 Do you want to see this web component in action? Visit https://codepen.io/jdnichollsc/full/NWWxezM yay! 🎉
 - Flappy Bird: https://codepen.io/jdnichollsc/full/jOOWXJQ
 - Like Thor: https://codepen.io/jdnichollsc/full/gOOroMr
+- Drawing in Canvas: https://codepen.io/jdnichollsc/full/KKKONMP
 
 ## IonPhaser 3
 Looking for [Phaser Framework 3](https://github.com/photonstorm/phaser)? Check [here](https://github.com/proyecto26/ion-phaser)!
