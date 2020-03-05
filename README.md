@@ -26,6 +26,7 @@ Do you want to see this web component in action? Visit https://codepen.io/jdnich
 - Flappy Bird: https://codepen.io/jdnichollsc/full/jOOWXJQ
 - Like Thor: https://codepen.io/jdnichollsc/full/gOOroMr
 - Drawing in Canvas: https://codepen.io/jdnichollsc/full/KKKONMP
+- Drag & Rotate images: https://codepen.io/jdnichollsc/full/LYVzQmp
 
 ## IonPhaser 3
 Looking for [Phaser Framework 3](https://github.com/photonstorm/phaser)? Check [here](https://github.com/proyecto26/ion-phaser)!
