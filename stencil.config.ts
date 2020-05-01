@@ -1,17 +1,18 @@
 import { Config } from '@stencil/core';
-import nodePolyfills from 'rollup-plugin-node-polyfills';
+import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'ion-phaser-ce',
-  plugins: [
-    nodePolyfills(),
-  ],
   commonjs: {
     namedExports: {
       'phaser-ce': ['Game', 'IGameConfig']
     }
   },
   outputTargets: [
+    reactOutputTarget({
+      componentCorePackage: '@ion-phaser-ce/core',
+      proxiesFile: './react/src/components.ts'
+    }),
     {
       type: 'dist',
       esmLoaderPath: '../loader'

@@ -117,7 +117,7 @@ a.bttn-dark:focus {
   }
 }
 
-.game {
+ion-phaser-ce {
   z-index: 1;
   position: absolute;
   width: 100%;

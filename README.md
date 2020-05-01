@@ -42,7 +42,7 @@ Looking for [Phaser Framework 3](https://github.com/photonstorm/phaser)? Check [
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser-ce/core@1.0.2/dist/ionphaser.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser-ce/core@1.0.3/dist/ionphaser.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
@@ -193,7 +193,7 @@ When using a wrapper component, It's not necessary to access the reference direc
 ```tsx
 import React, { Component } from 'react'
 import Phaser from 'phaser-ce'
-import { IonPhaser } from '@ion-phaser-ce/react'
+import { IonPhaserCe } from '@ion-phaser-ce/react'
 
 class App extends Component {
   state = {
@@ -208,7 +208,7 @@ class App extends Component {
   render() {
     const { initialize, game } = this.state
     return (
-      <IonPhaser game={game} initialize={initialize} />
+      <IonPhaserCe game={game} initialize={initialize} />
     )
   }
 }

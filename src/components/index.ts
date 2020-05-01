@@ -1,1 +1,0 @@
-export { IonPhaser } from './ion-phaser/ion-phaser'
