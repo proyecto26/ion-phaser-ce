@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { IonPhaserCe } from '@ion-phaser-ce/react'
+import React, { useState, useEffect } from 'react'
+import { IonPhaserCe, GameInstance } from '@ion-phaser-ce/react'
 import Phaser from 'phaser-ce'
 import logo from './assets/logo.png'
 
@@ -27,51 +27,48 @@ class MainState extends Phaser.State {
   }
 } 
 
-const game: Phaser.IGameConfig = {
+const gameConfig: GameInstance = {
   width: "100%",
   height: "100%",
   renderer: Phaser.AUTO,
   state: MainState
 }
 
-class App extends Component {
+export default function App () {
+  const [game, setGame] = useState<GameInstance>()
+  const [initialize, setInitialize] = useState(false)
 
-  state = {
-    initialize: false
+  const destroy = () => {
+    console.log('Instance', game?.instance)
+    setInitialize(false)
+    setGame(undefined)
   }
 
-  initializeGame = () => {
-    this.setState({ initialize: true })
-  }
+  useEffect(() => {
+    if (initialize) {
+      setGame(Object.assign({}, gameConfig))
+    }
+  }, [initialize])
 
-  destroy = () => {
-    this.setState({ initialize: false })
-  }
-
-  render() {
-    const { initialize } = this.state
-    return (
-      <div className="App">
-        <header className="App-header">
-          { initialize ? (
-            <>
-              <IonPhaserCe class="game" game={game} initialize={initialize} />
-              <div onClick={this.destroy} className="flex destroyButton">
-                <a href="#1" className="bttn">Destroy</a>
-              </div>
-            </>
-          ) : (
-            <>
-              <img src={logo} className="App-logo" alt="logo" />
-              <div onClick={this.initializeGame} className="flex">
-                <a href="#1" className="bttn">Initialize</a>
-              </div>
-            </>
-          )}
-        </header>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <header className="App-header">
+        { initialize ? (
+          <>
+            <IonPhaserCe class="game" game={game} initialize={initialize} />
+            <div onClick={destroy} className="flex destroyButton">
+              <a href="#1" className="bttn">Destroy</a>
+            </div>
+          </>
+        ) : (
+          <>
+            <img src={logo} className="App-logo" alt="logo" />
+            <div onClick={() => setInitialize(true)} className="flex">
+              <a href="#1" className="bttn">Initialize</a>
+            </div>
+          </>
+        )}
+      </header>
+    </div>
+  );
 }
-
-export default App;
