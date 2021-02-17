@@ -57,13 +57,13 @@ export class IonPhaser {
     }
   }
 
-  componentWillLoad() {
+  connectedCallback() {
     if (!this.hasInitialized() && this.initialize) {
       this.initializeGame()
     }
   }
 
-  componentDidUnload() {
+  disconnectedCallback() {
     this.destroy()
   }
 
