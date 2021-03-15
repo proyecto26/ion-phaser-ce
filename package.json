@@ -1,6 +1,6 @@
 {
   "name": "@ion-phaser-ce/core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "description": "A web component to integrate Phaser Framework CE (Community Edition) with Angular, React, Vue, etc",
   "author": "Proyecto 26",
