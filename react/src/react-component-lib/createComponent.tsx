@@ -7,10 +7,13 @@ import {
   isCoveredByReact,
   mergeRefs,
 } from './utils';
-import { HTMLStencilElement } from '@stencil/core/internal/stencil-public-runtime';
+
+export interface HTMLStencilElement extends HTMLElement {
+  componentOnReady(): Promise<this>;
+}
 
 interface StencilReactInternalProps<ElementType> extends React.HTMLAttributes<ElementType> {
-  forwardedRef?: React.RefObject<ElementType>;
+  forwardedRef: React.RefObject<ElementType>;
   ref?: React.Ref<any>;
 }
 
@@ -22,15 +25,15 @@ export const createReactComponent = <
 >(
   tagName: string,
   ReactComponentContext?: React.Context<ContextStateType>,
-  manipulatePropsFunction: (
+  manipulatePropsFunction?: (
     originalProps: StencilReactInternalProps<ElementType>,
     propsToPass: any,
-  ) => ExpandedPropsTypes = undefined,
+  ) => ExpandedPropsTypes,
 ) => {
   const displayName = dashToPascalCase(tagName);
 
   const ReactComponent = class extends React.Component<StencilReactInternalProps<ElementType>> {
-    componentEl: ElementType;
+    componentEl!: ElementType;
 
     setComponentElRef = (element: ElementType) => {
       this.componentEl = element;
@@ -54,9 +57,11 @@ export const createReactComponent = <
       let propsToPass = Object.keys(cProps).reduce((acc, name) => {
         if (name.indexOf('on') === 0 && name[2] === name[2].toUpperCase()) {
           const eventName = name.substring(2).toLowerCase();
-          if (isCoveredByReact(eventName)) {
+          if (typeof document !== 'undefined' && isCoveredByReact(eventName, document)) {
             (acc as any)[name] = (cProps as any)[name];
           }
+        } else {
+          (acc as any)[name] = (cProps as any)[name];
         }
         return acc;
       }, {});
@@ -65,7 +70,7 @@ export const createReactComponent = <
         propsToPass = manipulatePropsFunction(this.props, propsToPass);
       }
 
-      let newProps: StencilReactInternalProps<ElementType> = {
+      let newProps: Omit<StencilReactInternalProps<ElementType>, 'forwardedRef'> = {
         ...propsToPass,
         ref: mergeRefs(forwardedRef, this.setComponentElRef),
         style,

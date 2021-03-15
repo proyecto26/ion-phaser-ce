@@ -5,8 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { GameInstance } from "./components/models";
-import { Game } from "phaser-ce";
+import { GameInstance } from "./components/models/game";
 export namespace Components {
     interface IonPhaserCe {
         /**
@@ -20,7 +19,7 @@ export namespace Components {
         /**
           * Get the Phaser game instance
          */
-        "getInstance": () => Promise<Game>;
+        "getInstance": () => Promise<GameInstance['instance']>;
         /**
           * Initialize the phaser game manually
          */

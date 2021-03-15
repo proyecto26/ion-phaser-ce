@@ -1,6 +1,6 @@
 {
   "name": "@ion-phaser-ce/react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React specific wrapper for @ion-phaser-ce/core",
   "keywords": [
     "ionic",
@@ -26,7 +26,7 @@
     "clean": "rm -rf dist",
     "compile": "npm run tsc",
     "tsc": "tsc -p .",
-    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix --ignore-pattern 'src/react-component-lib/*'"
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix --ignore-pattern 'src/react-component-lib/*' --no-eslintrc -c .eslintrc.json"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -35,7 +35,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@ion-phaser-ce/core": "^1.0.3"
+    "@ion-phaser-ce/core": "^1.0.4"
   },
   "devDependencies": {
     "@types/jest": "23.3.9",
