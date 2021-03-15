@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { IonPhaserCe, GameInstance } from '@ion-phaser-ce/react'
 import Phaser from 'phaser-ce'
 import logo from './assets/logo.png'
@@ -35,11 +35,12 @@ const gameConfig: GameInstance = {
 }
 
 export default function App () {
+  const gameRef = useRef<HTMLIonPhaserCeElement>()
   const [game, setGame] = useState<GameInstance>()
   const [initialize, setInitialize] = useState(false)
 
   const destroy = () => {
-    console.log('Instance', game?.instance)
+    gameRef.current?.destroy()
     setInitialize(false)
     setGame(undefined)
   }
