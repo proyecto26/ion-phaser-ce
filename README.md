@@ -42,7 +42,7 @@ Looking for [Phaser Framework 3](https://github.com/photonstorm/phaser)? Check [
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser-ce/core@1.0.3/dist/ionphaser.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser-ce/core@1.0.5/dist/ionphaser.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
@@ -307,6 +307,11 @@ export default {
 
 [_from stencil documentation_](https://github.com/ionic-team/stencil-site/blob/master/src/docs/framework-integration/vue.md)
 
+## Contributing ✨
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.  
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated** ❤️.  
+You can learn more about how you can contribute to this project in the [contribution guide](https://github.com/proyecto26/ion-phaser-ce/blob/develop/CONTRIBUTING.md).
+
 ## Supporting 🍻
 I believe in Unicorns 🦄
 Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
@@ -319,6 +324,9 @@ The maintainers of IonPhaser CE and thousands of other packages are working with
 
 ## Security contact information 🚨
 To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
+
+## License ⚖️
+This repository is available under the [MIT License](https://github.com/proyecto26/ion-phaser-ce/blob/develop/LICENSE).
 
 ## Happy coding 💯
 Made with ❤️

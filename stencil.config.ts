@@ -3,19 +3,20 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'ion-phaser-ce',
-  commonjs: {
-    namedExports: {
-      'phaser-ce': ['Game', 'IGameConfig']
-    }
-  },
+  excludeUnusedDependencies: true,
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: '@ion-phaser-ce/core',
-      proxiesFile: './react/src/components.ts'
+      proxiesFile: './react/src/components.ts',
+      includeDefineCustomElements: true,
+      includePolyfills: true
     }),
     {
       type: 'dist',
       esmLoaderPath: '../loader'
+    },
+    {
+      type: 'dist-custom-elements-bundle',
     },
     {
       type: 'docs-readme'
