@@ -56,7 +56,7 @@ export default function App () {
       <header className="App-header">
         { initialize ? (
           <>
-            <IonPhaserCe class="game" game={game} initialize={initialize} />
+            <IonPhaserCe ref={gameRef} class="game" game={game} initialize={initialize} />
             <div onClick={destroy} className="flex destroyButton">
               <a href="#1" className="bttn">Destroy</a>
             </div>
