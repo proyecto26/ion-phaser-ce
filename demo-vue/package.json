@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "^3.0.0",
     "vue": "^2.6.10",
-    "phaser-ce": "2.13.3",
+    "phaser-ce": "2.16.2",
     "@ion-phaser-ce/core": "^1.0.4"
   },
   "devDependencies": {
@@ -20,7 +20,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^7.0.0",
     "eslint-plugin-vue": "^7.0.0",
-    "expose-loader": "^2.0.0",
+    "expose-loader": "^1.0.0",
     "vue-template-compiler": "^2.6.10"
   },
   "postcss": {

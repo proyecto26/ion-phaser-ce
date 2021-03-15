@@ -1,7 +1,7 @@
-import Vue from 'vue'
 import 'pixi'
 import 'p2'
 import 'phaser'
+import Vue from 'vue'
 import { defineCustomElements as defineIonPhaser } from '@ion-phaser-ce/core/loader'
 
 import App from './App.vue'
