@@ -31,6 +31,13 @@ Do you want to see this web component in action? Visit https://codepen.io/jdnich
 ## IonPhaser 3
 Looking for [Phaser Framework 3](https://github.com/photonstorm/phaser)? Check [here](https://github.com/proyecto26/ion-phaser)!
 
+## Usage
+Simply add this tag wherever you want in your project:
+- [ion-phaser](./src/components/ion-phaser/readme.md)
+```html
+<ion-phaser-ce [game]="game"></ion-phaser-ce>
+```
+
 ## Getting Started
 
 ### Packages
@@ -54,16 +61,6 @@ Looking for [Phaser Framework 3](https://github.com/photonstorm/phaser)? Check [
 - Run `npm install @ion-phaser-ce/core --save`
 - Add an import to the npm packages `import @ion-phaser-ce/core;`
 - Then you can use the element anywhere in your template, JSX, html etc
-
-## Usage
-Simply add this tag wherever you want in your project:
-```html
-<ion-phaser-ce [game]="game"></ion-phaser-ce>
-```
-
-These properties are available on the component:
-- [_game_](#configuration) (**required**)
-- **initialize** (optional)
 
 # Framework integrations
 
