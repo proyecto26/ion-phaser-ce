@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-03-16
+### Changed
+- v1.1.0 ([43ce370](https://github.com/proyecto26/ion-phaser-ce/commit/43ce37019210355a70ef8886573213ccd1de3c48)).
+
+### Fixed
+- phaser-ce dynamic imports for correct global initialization order ([edfed19](https://github.com/proyecto26/ion-phaser-ce/commit/edfed197536d4f59d26e463a27fd31475709402b)).
+- upgrade demo-react to React 18 + Vite, fix React wrapper for Stencil v4 ([b4cb0e5](https://github.com/proyecto26/ion-phaser-ce/commit/b4cb0e561418dc4d1b9283a30f5eb9f7497643ad)).
+
+
+
+
 ## [1.1.0] - 2026-03-16
 ### Added
 - upgrade Stencil v4, React 17/18 support, release automation ([f3c22b3](https://github.com/proyecto26/ion-phaser-ce/commit/f3c22b38f3b3eb411708458a1de052e91aafd807)).
@@ -38,7 +49,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Added watch for `game` prop to fix issues initializing the phaser game.
 
-[Unreleased]: https://github.com/proyecto26/ion-phaser-ce/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/proyecto26/ion-phaser-ce/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/proyecto26/ion-phaser-ce/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/proyecto26/ion-phaser-ce/compare/v1.0.5...v1.1.0
 [1.0.5]: https://github.com/proyecto26/ion-phaser-ce/compare/v1.0.3...v1.0.5
 [1.0.3]: https://github.com/proyecto26/ion-phaser-ce/compare/v1.0.2...v1.0.3
