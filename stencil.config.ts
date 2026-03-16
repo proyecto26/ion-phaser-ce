@@ -3,20 +3,19 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'ion-phaser-ce',
-  excludeUnusedDependencies: true,
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: '@ion-phaser-ce/core',
       proxiesFile: './react/src/components.ts',
-      includeDefineCustomElements: true,
-      includePolyfills: true
+      outDir: './react/src',
     }),
     {
       type: 'dist',
       esmLoaderPath: '../loader'
     },
     {
-      type: 'dist-custom-elements-bundle',
+      type: 'dist-custom-elements',
+      externalRuntime: false,
     },
     {
       type: 'docs-readme'

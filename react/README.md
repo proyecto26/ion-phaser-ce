@@ -20,7 +20,7 @@ window.Phaser = require('phaser-ce/build/custom/phaser-split');
 - Using the **IonPhaserCe** component:
 
 ```tsx
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Phaser from 'phaser-ce'
 import { IonPhaserCe } from '@ion-phaser-ce/react'
 
@@ -50,10 +50,21 @@ const game = {
 }
 
 export default function App () {
-  // Call `setInitialize` when you want to initialize your game as a component! :)
-  const [initialize, setInitialize] = useState(false);
+  const gameRef = useRef(null)
+  // Call `setInitialize` when you want to initialize your game! :)
+  const [initialize, setInitialize] = useState(false)
+  const destroy = () => {
+    if (gameRef.current) {
+      gameRef.current.destroy()
+    }
+    setInitialize(false)
+  }
   return (
-    <IonPhaserCe game={game} initialize={initialize} />
+    <>
+      <IonPhaserCe ref={gameRef} game={game} initialize={initialize} />
+      <button onClick={() => setInitialize(true)}>Initialize</button>
+      <button onClick={destroy}>Destroy</button>
+    </>
   )
 }
 ```

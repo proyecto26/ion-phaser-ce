@@ -37,10 +37,10 @@
     "2d"
   ],
   "main": "dist/index.cjs.js",
-  "module": "dist/custom-elements/index.js",
+  "module": "dist/components/index.js",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
-  "types": "dist/custom-elements/index.d.ts",
+  "types": "dist/components/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/ion-phaser-ce/ion-phaser-ce.esm.js",
@@ -59,19 +59,17 @@
   "peerDependencies": {
     "phaser-ce": "^2.13.3"
   },
-  "dependencies": {
-    "@stencil/core": "^2.4.0"
-  },
   "devDependencies": {
-    "@stencil/eslint-plugin": "^0.3.1",
-    "@stencil/react-output-target": "^0.0.9",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
-    "@typescript-eslint/parser": "^4.15.1",
-    "eslint": "^7.20.0",
-    "eslint-plugin-react": "^7.22.0",
+    "@stencil/core": "^4.22.0",
+    "@stencil/react-output-target": "^0.7.1",
+    "@types/jest": "^29.5.14",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.0",
     "phaser-ce": "^2.16.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "typescript": "^4.0.5"
+    "typescript": "~5.5.0"
   },
   "license": "MIT",
   "repository": {

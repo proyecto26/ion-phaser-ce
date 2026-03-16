@@ -31,6 +31,13 @@ Do you want to see this web component in action? Visit https://codepen.io/jdnich
 ## IonPhaser 3
 Looking for [Phaser Framework 3](https://github.com/photonstorm/phaser)? Check [here](https://github.com/proyecto26/ion-phaser)!
 
+## Usage
+Simply add this tag wherever you want in your project:
+- [ion-phaser](./src/components/ion-phaser/readme.md)
+```html
+<ion-phaser-ce [game]="game"></ion-phaser-ce>
+```
+
 ## Getting Started
 
 ### Packages
@@ -42,28 +49,18 @@ Looking for [Phaser Framework 3](https://github.com/photonstorm/phaser)? Check [
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser-ce/core@1.0.5/dist/ionphaser.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://cdn.jsdelivr.net/npm/@ion-phaser-ce/core@1.0.5/dist/ion-phaser-ce/ion-phaser-ce.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
 - Run `npm install @ion-phaser-ce/core --save`
-- Put a script tag similar to this `<script src='node_modules/@ion-phaser-ce/core/dist/ion-phaser-ce.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='node_modules/@ion-phaser-ce/core/dist/ion-phaser-ce/ion-phaser-ce.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### In a stencil-starter app
 - Run `npm install @ion-phaser-ce/core --save`
 - Add an import to the npm packages `import @ion-phaser-ce/core;`
 - Then you can use the element anywhere in your template, JSX, html etc
-
-## Usage
-Simply add this tag wherever you want in your project:
-```html
-<ion-phaser-ce [game]="game"></ion-phaser-ce>
-```
-
-These properties are available on the component:
-- [_game_](#configuration) (**required**)
-- **initialize** (optional)
 
 # Framework integrations
 
@@ -316,7 +313,13 @@ You can learn more about how you can contribute to this project in the [contribu
 I believe in Unicorns 🦄
 Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
 
-## Enterprise 💼
+Donate **Ethereum**, **ADA**, **BNB**, **SHIBA**, **USDT/USDC**, **DOGE**, etc:
+
+> Wallet address: jdnichollsc.eth
+
+Please let us know your contributions! 🙏
+
+## Enterprise Support 💼
 
 Available as part of the Tidelift Subscription.
 
@@ -332,3 +335,4 @@ This repository is available under the [MIT License](https://github.com/proyecto
 Made with ❤️
 
 <img width="150px" src="https://avatars0.githubusercontent.com/u/28855608?s=200&v=4" align="right">
+
