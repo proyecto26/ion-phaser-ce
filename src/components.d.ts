@@ -6,6 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { GameInstance } from "./components/models/game";
+export { GameInstance } from "./components/models/game";
 export namespace Components {
     interface IonPhaserCe {
         /**
@@ -19,9 +20,10 @@ export namespace Components {
         /**
           * Get the Phaser game instance
          */
-        "getInstance": () => Promise<GameInstance['instance']>;
+        "getInstance": () => Promise<GameInstance["instance"]>;
         /**
           * Initialize the phaser game manually
+          * @default true
          */
         "initialize"?: boolean;
     }
@@ -45,18 +47,24 @@ declare namespace LocalJSX {
         "game"?: GameInstance;
         /**
           * Initialize the phaser game manually
+          * @default true
          */
         "initialize"?: boolean;
     }
+
+    interface IonPhaserCeAttributes {
+        "initialize": boolean;
+    }
+
     interface IntrinsicElements {
-        "ion-phaser-ce": IonPhaserCe;
+        "ion-phaser-ce": Omit<IonPhaserCe, keyof IonPhaserCeAttributes> & { [K in keyof IonPhaserCe & keyof IonPhaserCeAttributes]?: IonPhaserCe[K] } & { [K in keyof IonPhaserCe & keyof IonPhaserCeAttributes as `attr:${K}`]?: IonPhaserCeAttributes[K] } & { [K in keyof IonPhaserCe & keyof IonPhaserCeAttributes as `prop:${K}`]?: IonPhaserCe[K] };
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "ion-phaser-ce": LocalJSX.IonPhaserCe & JSXBase.HTMLAttributes<HTMLIonPhaserCeElement>;
+            "ion-phaser-ce": LocalJSX.IntrinsicElements["ion-phaser-ce"] & JSXBase.HTMLAttributes<HTMLIonPhaserCeElement>;
         }
     }
 }
