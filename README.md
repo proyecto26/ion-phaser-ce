@@ -332,7 +332,7 @@ To report a security vulnerability, please use the [Tidelift security contact](h
 This repository is available under the [MIT License](https://github.com/proyecto26/ion-phaser-ce/blob/develop/LICENSE).
 
 ## Happy coding 💯
-Made with ❤️
+Made with ❤️ by [Proyecto 26](https://proyecto26.com)
 
 <img width="150px" src="https://avatars0.githubusercontent.com/u/28855608?s=200&v=4" align="right">
 
